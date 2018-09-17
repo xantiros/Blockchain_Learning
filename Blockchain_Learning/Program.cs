@@ -6,12 +6,14 @@ namespace Blockchain_Learning
     {
         static void Main(string[] args)
         {
-            Blockchain blockchain1 = new Blockchain(); 
+            Blockchain blockchain1 = new Blockchain();  //nowy blockchain -> nowy block 
+                                                        //nowa lista BlockList i Block(null)
+                                                        //PreviousHash - null i TransactionList - nowa lista
             blockchain1.AddTransaction(5, "Jan", "Michał");
             blockchain1.AddTransaction(2.1, "Grzegorz", "Kamil");
             blockchain1.AddTransaction(1.23, "Paweł", "Jakub");
 
-            blockchain1.SaveBlock();
+            blockchain1.SaveBlock(); //dodanie aktualengo bloku do łańcucha i utworzenie nowego, pustego bloku
             Console.WriteLine(blockchain1.CurrentBlock.PreviousHash);
             blockchain1.SaveBlock();
             Console.WriteLine(blockchain1.CurrentBlock.PreviousHash);

@@ -22,8 +22,8 @@ namespace Blockchain_Learning
         {
             string currentHash = Helper.GetSha256Hash(CurrentBlock);
             CurrentBlock.Hash = Helper.GetSha256Hash(CurrentBlock);
-            BlockList.Add(CurrentBlock);
-            CurrentBlock = new Block(currentHash);
+            BlockList.Add(CurrentBlock); //dodanie aktualnego bloku
+            CurrentBlock = new Block(currentHash); //nowy blok
         }
     }
 }
