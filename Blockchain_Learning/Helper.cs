@@ -10,7 +10,7 @@ namespace Blockchain_Learning
         #region Public methods
         public static string GetSha256Hash(object obj)
         {
-            var sha256 = new SHA256Managed();
+            var sha256 = new SHA256Managed(); //// Initialize a SHA256 hash object.
             var hashBuilder = new StringBuilder();
 
             //zmiana obiektu na tablice bajtów

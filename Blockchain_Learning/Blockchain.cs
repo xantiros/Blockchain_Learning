@@ -5,12 +5,12 @@ namespace Blockchain_Learning
     public class Blockchain
     {
         public List<Block> BlockList { get; set; }
-        public Block CurrentBlock { get; set; }
+        public Block CurrentBlock { get; set; } //aktualny blok, posiada liste transakcji
 
         public Blockchain()
         {
-            BlockList = new List<Block>();
-            CurrentBlock = new Block(null);
+            BlockList = new List<Block>(); //nowa lista bloków
+            CurrentBlock = new Block(null); //nowy block - PreviousHash = null; 
         }
 
         public void AddTransaction(double amount, string from, string to)
